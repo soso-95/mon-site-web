@@ -9,37 +9,37 @@
 </head>
 <body>
     <!-- Photo de profil centrée en haut -->
-    <div class="profile-photo-top">
-        <!-- REMPLACER par votre photo -->
-        <img src="/assets/photo_profil.jpg" alt="Photo de Solène Riout">
+    <div class="profile-header">
+        <div class="profile-photo-small">
+            <img src="/assets/photo_profil.jpg" alt="Photo de Solène Riout">
+        </div>
     </div>
 
-    <!-- Navigation par onglets (remplace la barre de recherche) -->
-    <nav class="tabs-nav">
-        <div class="tabs-container">
-            <a href="#profil" class="tab-link">Profil</a>
-            <a href="#qui-suis-je" class="tab-link">Qui suis-je</a>
-            <a href="#parcours" class="tab-link">Mon parcours</a>
-            <a href="#competences" class="tab-link">Compétences</a>
-            <a href="#reussites" class="tab-link">Réussites</a>
-            <a href="#aspirations" class="tab-link">Aspirations</a>
-            <a href="#contact" class="tab-link">Contact</a>
+    <!-- Navigation avec onglets -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#profil" class="nav-tab">Profil</a>
+            <a href="#qui-suis-je" class="nav-tab">Qui suis-je</a>
+            <a href="#parcours" class="nav-tab">Mon parcours</a>
+            <a href="#competences" class="nav-tab">Mes compétences</a>
+            <a href="#reussites" class="nav-tab">Réussites & fiertés</a>
+            <a href="#aspirations" class="nav-tab">Mes aspirations</a>
+            <a href="#contact" class="nav-tab">Contact</a>
         </div>
-        <button id="themeToggle" class="theme-toggle-top" onclick="toggleTheme()">
+        <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
             <span class="theme-icon">☀️</span>
         </button>
     </nav>
 
-    <!-- Section Profil (pleine largeur, mise en avant de l'alternance) -->
-    <section id="profil" class="profile-section">
-        <div class="profile-container">
-            <h1 class="profile-name">Solène Riout</h1>
-            <p class="profile-age">20 ans</p>
-            <p class="profile-formation">Étudiante en Licence Professionnelle CPSS</p>
-            <p class="profile-alternance">En alternance chez Décathlon</p>
-            <p class="profile-tagline">✨ Passionnée par le sport, l'animation et les projets humains ✨</p>
+    <!-- Section Profil (pleine largeur) -->
+    <section id="profil" class="hero-section">
+        <div class="hero-content-full">
+            <h1 class="hero-name">Solène Riout</h1>
+            <p class="hero-subtitle">20 ans — Étudiante en Licence Professionnelle CPSS</p>
+            <p class="hero-alternance">En alternance chez Décathlon</p>
+            <p class="hero-tagline">Passionnée par le sport, l'animation et les projets humains ✨</p>
             
-            <div class="profile-buttons">
+            <div class="hero-buttons">
                 <a href="/assets/CV_Solene_Riout.pdf" download class="btn btn-primary">
                     📄 Télécharger mon CV
                 </a>
@@ -48,18 +48,18 @@
                 </a>
             </div>
 
-            <div class="profile-quote">
+            <div class="hero-quote">
                 <p>« Le plus grand danger, c'est de ne pas prendre de risque. »</p>
                 <span>— Mark Zuckerberg</span>
             </div>
         </div>
     </section>
 
-    <!-- Section Qui suis-je (pleine largeur, sans photo, bien visible) -->
-    <section id="qui-suis-je" class="section section-fullwidth">
-        <div class="container-fullwidth">
+    <!-- Section Qui suis-je (pleine largeur, sans photo) -->
+    <section id="qui-suis-je" class="section section-highlight">
+        <div class="container-full">
             <h2 class="section-title">🌟 Qui suis-je ?</h2>
-            <div class="about-fullwidth">
+            <div class="about-content-full">
                 <p>Je m'appelle Solène, j'ai 20 ans et je suis étudiante en 3ᵉ année de Licence Professionnelle CPSS, en alternance chez Décathlon. Passionnée par le sport depuis toujours, j'ai été sportive de haut niveau en tennis de table, une expérience qui m'a appris la rigueur, la persévérance et le dépassement de soi.</p>
                 
                 <p>Mon parcours est guidé par une conviction forte : l'humain est au cœur de tout projet réussi. Chez Décathlon, je développe mes compétences en gestion, management et service client. J'ai aussi eu la chance de participer à un séminaire en Écosse où j'ai co-créé un casque de rugby innovant pour prévenir les accidents — un projet qui a renforcé ma créativité et mon esprit d'équipe.</p>
@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <!-- Section Mon Parcours (avec images pour chaque étape) -->
+    <!-- Section Parcours avec images -->
     <section id="parcours" class="section">
         <div class="container">
             <h2 class="section-title">📍 Mon Parcours</h2>
@@ -80,9 +80,8 @@
                 
                 <div class="timeline-item left scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_bac.jpg" alt="Baccalauréat STMG">
+                            <img src="/assets/bac_stmg.jpg" alt="Baccalauréat STMG">
                         </div>
                         <div class="timeline-date">2019</div>
                         <h3>🎓 Baccalauréat technologique STMG</h3>
@@ -92,9 +91,8 @@
 
                 <div class="timeline-item right scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_licence.jpg" alt="Licence Pro CPSS">
+                            <img src="/assets/licence_cpss.jpg" alt="Licence Pro CPSS">
                         </div>
                         <div class="timeline-date">2022</div>
                         <h3>📚 Entrée en Licence Pro CPSS</h3>
@@ -104,9 +102,8 @@
 
                 <div class="timeline-item left scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_ecosse.jpg" alt="Séminaire Écosse">
+                            <img src="/assets/ecosse_seminaire.jpg" alt="Séminaire en Écosse">
                         </div>
                         <div class="timeline-date">2023</div>
                         <h3>🧢 Séminaire en Écosse</h3>
@@ -116,9 +113,8 @@
 
                 <div class="timeline-item right scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_decathlon.jpg" alt="Alternance Décathlon">
+                            <img src="/assets/decathlon_alternance.jpg" alt="Alternance Décathlon">
                         </div>
                         <div class="timeline-date">2023-2024</div>
                         <h3>💼 Alternance chez Décathlon</h3>
@@ -128,21 +124,19 @@
 
                 <div class="timeline-item left scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_animation.jpg" alt="Animation colonie">
+                            <img src="/assets/colonie_animation.jpg" alt="Animation colonie">
                         </div>
                         <div class="timeline-date">Été 2024</div>
-                        <h3>🏕️ Animatrice en colonie</h3>
+                        <h3>🕐️ Animatrice en colonie</h3>
                         <p>Animation de colonies de vacances, obtention du BAFA et accompagnement des jeunes.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item right scroll-reveal">
                     <div class="timeline-card">
-                        <!-- REMPLACER par image pertinente -->
                         <div class="timeline-image">
-                            <img src="/assets/parcours_futur.jpg" alt="Projet futur">
+                            <img src="/assets/voyage_futur.jpg" alt="Projets futurs">
                         </div>
                         <div class="timeline-date">2025</div>
                         <h3>✈️ Prochaine étape</h3>
@@ -204,7 +198,6 @@
             <h2 class="section-title">🏆 Réussites & Fiertés</h2>
             <div class="achievements-grid">
                 <div class="achievement-card scroll-reveal">
-                    <!-- REMPLACER par photo du projet -->
                     <div class="achievement-image">
                         <img src="/assets/photo_projet1.jpg" alt="Projet casque de rugby">
                     </div>
@@ -227,7 +220,6 @@
                 </div>
 
                 <div class="achievement-card scroll-reveal">
-                    <!-- REMPLACER par photo de voyage -->
                     <div class="achievement-image">
                         <img src="/assets/photo_voyage.jpg" alt="Voyages internationaux">
                     </div>
@@ -260,7 +252,7 @@
         </div>
     </section>
 
-    <!-- Section Contact (TikTok supprimé) -->
+    <!-- Section Contact -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">📬 Contactez-moi</h2>
@@ -290,7 +282,6 @@
                 <div class="contact-info-wrapper">
                     <h3>Retrouvez-moi aussi sur</h3>
                     <div class="social-links">
-                        <!-- REMPLACER les liens par vos vrais profils -->
                         <a href="https://linkedin.com/in/votre-profil" target="_blank" class="social-link">
                             <span class="social-icon">💼</span>
                             <span>LinkedIn</span>
@@ -307,7 +298,6 @@
                     
                     <div class="direct-contact">
                         <h4>Ou écrivez-moi directement</h4>
-                        <!-- REMPLACER par votre vrai email -->
                         <a href="mailto:solene.riout@example.com" class="email-link">
                             ✉️ solene.riout@example.com
                         </a>
@@ -371,11 +361,11 @@
             });
         });
 
-        // Active tab highlighting
-        const tabs = document.querySelectorAll('.tab-link');
-        const sections = document.querySelectorAll('section[id]');
-
-        window.addEventListener('scroll', () => {
+        // Highlight active nav tab on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navTabs = document.querySelectorAll('.nav-tab');
+            
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -385,9 +375,9 @@
                 }
             });
 
-            tabs.forEach(tab => {
+            navTabs.forEach(tab => {
                 tab.classList.remove('active');
-                if (tab.getAttribute('href').substring(1) === current) {
+                if (tab.getAttribute('href') === '#' + current) {
                     tab.classList.add('active');
                 }
             });
