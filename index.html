@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Solène Riout - Étudiante en Licence Pro CPSS, alternante chez Décathlon, passionnée par le sport et l'animation">
+    <title>Solène Riout - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation avec recherche et mode jour/nuit -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#accueil" class="logo">SR</a>
+            </div>
+            <div class="nav-center">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Rechercher une section..." list="sections">
+                    <datalist id="sections">
+                        <option value="Qui suis-je ?">
+                        <option value="Mon parcours">
+                        <option value="Mes compétences">
+                        <option value="Réussites & fiertés">
+                        <option value="Mes aspirations">
+                        <option value="Contact">
+                    </datalist>
+                    <button id="searchBtn" onclick="searchSection()">🔍</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
+                    <span class="theme-icon">☀️</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-left">
+                <!-- REMPLACER par votre photo -->
+                <div class="profile-photo-large">
+                    <img src="/assets/photo_profil.jpg" alt="Photo de Solène Riout">
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1 class="hero-name">Solène Riout</h1>
+                <p class="hero-subtitle">20 ans — Étudiante en Licence Professionnelle CPSS</p>
+                <p class="hero-subtitle-secondary">(en alternance chez Décathlon)</p>
+                <p class="hero-tagline">Passionnée par le sport, l'animation et les projets humains ✨</p>
+                
+                <div class="hero-buttons">
+                    <a href="/assets/CV_Solene_Riout.pdf" download class="btn btn-primary">
+                        📄 Télécharger mon CV
+                    </a>
+                    <a href="#parcours" class="btn btn-secondary">
+                        🚀 Découvrir mon parcours
+                    </a>
+                </div>
+
+                <div class="hero-quote">
+                    <p>« Le plus grand danger, c'est de ne pas prendre de risque. »</p>
+                    <span>— Mark Zuckerberg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Qui suis-je -->
+    <section id="qui-suis-je" class="section fade-in">
+        <div class="container">
+            <h2 class="section-title">🌟 Qui suis-je ?</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Je m'appelle Solène, j'ai 20 ans et je suis étudiante en 3ᵉ année de Licence Professionnelle CPSS, en alternance chez Décathlon. Passionnée par le sport depuis toujours, j'ai été sportive de haut niveau en tennis de table, une expérience qui m'a appris la rigueur, la persévérance et le dépassement de soi.</p>
+                    
+                    <p>Mon parcours est guidé par une conviction forte : l'humain est au cœur de tout projet réussi. Chez Décathlon, je développe mes compétences en gestion, management et service client. J'ai aussi eu la chance de participer à un séminaire en Écosse où j'ai co-créé un casque de rugby innovant pour prévenir les accidents — un projet qui a renforcé ma créativité et mon esprit d'équipe.</p>
+                    
+                    <p>Diplômée du BAFA, j'anime régulièrement des colonies de vacances, ce qui nourrit ma passion pour l'accompagnement des jeunes. Mes nombreux voyages à travers le monde ont développé mon ouverture d'esprit et ma capacité d'adaptation.</p>
+                    
+                    <p>Après ma licence, je souhaite consacrer une année à l'animation tout en voyageant, avant de m'orienter vers un métier alliant sport, éducation et dimension internationale. Mon rêve ? Encadrer des jeunes, organiser des projets sportifs et continuer à explorer le monde.</p>
+                </div>
+                <div class="about-image">
+                    <!-- REMPLACER par votre photo -->
+                    <img src="/assets/photo_profil.jpg" alt="Solène Riout">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours (Timeline double colonne) -->
+    <section id="parcours" class="section">
+        <div class="container">
+            <h2 class="section-title">📍 Mon Parcours</h2>
+            <div class="timeline-double">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2019</div>
+                        <h3>🎓 Baccalauréat technologique STMG</h3>
+                        <p>Obtention du diplôme avec mention, première étape vers le monde du commerce et du management.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2022</div>
+                        <h3>📚 Entrée en Licence Pro CPSS</h3>
+                        <p>Début de ma spécialisation dans la commercialisation de produits et services sportifs.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2023</div>
+                        <h3>🧢 Séminaire en Écosse</h3>
+                        <p>Co-création d'un casque de rugby innovant pour prévenir les accidents. Projet international marquant.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2023-2024</div>
+                        <h3>💼 Alternance chez Décathlon</h3>
+                        <p>Développement de compétences en gestion, management d'équipe et service client.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">Été 2024</div>
+                        <h3>🏕️ Animatrice en colonie</h3>
+                        <p>Animation de colonies de vacances, obtention du BAFA et accompagnement des jeunes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2025</div>
+                        <h3>✈️ Prochaine étape</h3>
+                        <p>Objectif : une année dans l'animation avec des voyages autour du monde pour enrichir mon expérience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2 class="section-title">💪 Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">💼</div>
+                    <h3>Compétences Techniques</h3>
+                    <ul>
+                        <li>Gestion de projet (événementiel & produit)</li>
+                        <li>Management d'équipe</li>
+                        <li>Communication digitale</li>
+                        <li>Merchandising & commerce</li>
+                        <li>Service client</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">💡</div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Organisation & rigueur</li>
+                        <li>Écoute active</li>
+                        <li>Esprit d'équipe</li>
+                        <li>Adaptabilité</li>
+                        <li>Curiosité</li>
+                        <li>Persévérance</li>
+                        <li>Détermination</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🧰</div>
+                    <h3>Outils Numériques</h3>
+                    <ul>
+                        <li>Canva (création visuelle)</li>
+                        <li>Word & Google Slides</li>
+                        <li>Réseaux sociaux (Instagram, Facebook, LinkedIn, TikTok)</li>
+                        <li>Notions Excel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réussites & Fiertés -->
+    <section id="reussites" class="section">
+        <div class="container">
+            <h2 class="section-title">🏆 Réussites & Fiertés</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card scroll-reveal">
+                    <!-- REMPLACER par photo du projet -->
+                    <div class="achievement-image">
+                        <img src="/assets/photo_projet1.jpg" alt="Projet casque de rugby">
+                    </div>
+                    <div class="achievement-content">
+                        <h3>🏉 Casque de Rugby Innovant</h3>
+                        <p>Co-création d'un casque pour prévenir les accidents lors d'un séminaire international en Écosse. Projet complet : innovation, prototypage, travail d'équipe et présentation devant un jury international.</p>
+                        <p class="achievement-skills"><strong>Compétences :</strong> Innovation, créativité, collaboration internationale, rigueur méthodologique</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card scroll-reveal">
+                    <div class="achievement-image">
+                        <div class="achievement-icon-large">🎓</div>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Obtention du BAFA</h3>
+                        <p>Diplôme obtenu avec succès, symbole d'autonomie et de dépassement de soi. Confirmation de ma passion pour l'animation et l'accompagnement des jeunes à travers des activités ludiques et éducatives.</p>
+                        <p class="achievement-skills"><strong>Qualités :</strong> Autonomie, créativité, sens des responsabilités, pédagogie</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card scroll-reveal">
+                    <!-- REMPLACER par photo de voyage -->
+                    <div class="achievement-image">
+                        <img src="/assets/photo_voyage.jpg" alt="Voyages internationaux">
+                    </div>
+                    <div class="achievement-content">
+                        <h3>✈️ Voyages Internationaux</h3>
+                        <p>Plusieurs voyages par an à travers le monde, enrichissant mon ouverture d'esprit, ma capacité d'adaptation et mon autonomie face à différentes cultures. Découverte de nouveaux horizons et développement personnel.</p>
+                        <p class="achievement-skills"><strong>Qualités :</strong> Ouverture d'esprit, adaptabilité, autonomie, curiosité culturelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Aspirations -->
+    <section id="aspirations" class="section">
+        <div class="container">
+            <h2 class="section-title">🎯 Mes Aspirations</h2>
+            <div class="aspirations-content">
+                <div class="aspirations-text">
+                    <p>Après ma Licence Professionnelle CPSS, je souhaite consacrer une année complète à l'animation tout en voyageant à travers le monde. Cette expérience me permettra de nourrir ma passion pour l'accompagnement des jeunes tout en découvrant de nouvelles cultures et en développant mon ouverture d'esprit.</p>
+                    
+                    <p>À long terme, mon objectif est de travailler dans un secteur qui allie <strong>sport, éducation et dimension humaine</strong>. Je recherche un environnement dynamique, collaboratif et formateur où je pourrai mettre à profit mes compétences en organisation, communication et management.</p>
+                    
+                    <div class="dream-job">
+                        <h3>💫 Mon job de rêve</h3>
+                        <p>Encadrer des jeunes, organiser des projets sportifs et éducatifs à l'international, transmettre des valeurs à travers le sport et continuer à explorer le monde. Je veux contribuer à former les générations futures en leur offrant des expériences enrichissantes et formatrices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">📬 Contactez-moi</h2>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h3>Envoyez-moi un message</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <h3>Retrouvez-moi aussi sur</h3>
+                    <div class="social-links">
+                        <!-- REMPLACER les liens par vos vrais profils -->
+                        <a href="https://linkedin.com/in/votre-profil" target="_blank" class="social-link">
+                            <span class="social-icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com/votre-profil" target="_blank" class="social-link">
+                            <span class="social-icon">📷</span>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://tiktok.com/@votre-profil" target="_blank" class="social-link">
+                            <span class="social-icon">🎵</span>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://facebook.com/votre-profil" target="_blank" class="social-link">
+                            <span class="social-icon">👥</span>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    
+                    <div class="direct-contact">
+                        <h4>Ou écrivez-moi directement</h4>
+                        <!-- REMPLACER par votre vrai email -->
+                        <a href="mailto:solene.riout@example.com" class="email-link">
+                            ✉️ solene.riout@example.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Merci pour votre visite sur mon portfolio ! 💙</p>
+            <p class="footer-name">Solène Riout — 2025</p>
+            <p class="footer-credits">Créé avec passion</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle theme (jour/nuit)
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.querySelector('.theme-icon');
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.textContent = '🌙';
+            } else {
+                themeIcon.textContent = '☀️';
+            }
+        }
+
+        // Search function
+        function searchSection() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const sections = {
+                'qui suis-je': 'qui-suis-je',
+                'mon parcours': 'parcours',
+                'parcours': 'parcours',
+                'mes compétences': 'competences',
+                'compétences': 'competences',
+                'réussites': 'reussites',
+                'réussites & fiertés': 'reussites',
+                'fiertés': 'reussites',
+                'mes aspirations': 'aspirations',
+                'aspirations': 'aspirations',
+                'contact': 'contact'
+            };
+            
+            const targetSection = sections[searchValue];
+            if (targetSection) {
+                document.getElementById(targetSection).scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('searchInput').value = '';
+            }
+        }
+
+        // Search on Enter key
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchSection();
+            }
+        });
+
+        // Scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('.scroll-reveal, .fade-in');
+            scrollElements.forEach(el => observer.observe(el));
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
