@@ -45,123 +45,102 @@ body {
     transition: var(--transition);
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== PHOTO DE PROFIL EN HAUT ===== */
+.profile-header {
+    background: var(--card-bg);
+    padding: 2rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.profile-photo-small {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    border: 4px solid var(--primary);
+}
+
+.profile-photo-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== NAVIGATION AVEC ONGLETS ===== */
 .top-nav {
     position: sticky;
     top: 0;
     background: var(--card-bg);
     box-shadow: var(--shadow);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0;
     transition: var(--transition);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+    align-items: stretch;
+    gap: 0;
 }
 
-.nav-left .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary);
+.nav-tab {
+    flex: 1;
+    padding: 1.2rem 1rem;
+    text-align: center;
     text-decoration: none;
-    transition: var(--transition);
-}
-
-.nav-left .logo:hover {
-    opacity: 0.8;
-}
-
-.nav-center {
-    flex: 1;
-    max-width: 500px;
-}
-
-.search-box {
-    display: flex;
-    gap: 0.5rem;
-    background: var(--bg-main);
-    border-radius: 25px;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-lighter);
-}
-
-.search-box input {
-    flex: 1;
-    border: none;
-    background: transparent;
     color: var(--text-dark);
+    font-weight: 600;
     font-size: 0.95rem;
-    outline: none;
-}
-
-.search-box button {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
     transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
 }
 
-.search-box button:hover {
-    transform: scale(1.1);
+.nav-tab:hover {
+    background: var(--primary-lighter);
+    border-bottom-color: var(--primary);
+}
+
+.nav-tab.active {
+    background: var(--primary-lighter);
+    border-bottom-color: var(--primary);
+    color: var(--primary);
 }
 
 .theme-toggle {
     background: var(--primary-light);
     border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 60px;
+    height: 100%;
     font-size: 1.5rem;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-hover);
+    background: var(--primary);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== SECTION PROFIL (PLEINE LARGEUR) ===== */
 .hero-section {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--white) 100%);
 }
 
-.hero-container {
-    max-width: 1200px;
+.hero-content-full {
+    max-width: 1000px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.profile-photo-large {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-}
-
-.profile-photo-large img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: var(--shadow-hover);
-    object-fit: cover;
+    text-align: center;
 }
 
 .hero-name {
@@ -177,10 +156,13 @@ body {
     margin-bottom: 0.3rem;
 }
 
-.hero-subtitle-secondary {
-    font-size: 1.1rem;
-    color: var(--text-gray);
+.hero-alternance {
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 700;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .hero-tagline {
@@ -194,6 +176,8 @@ body {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -243,6 +227,8 @@ body {
     border-radius: 12px;
     border-left: 4px solid var(--primary);
     box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .hero-quote p {
@@ -257,9 +243,19 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== SECTIONS GÉNÉRALES ===== */
+/* ===== SECTION QUI SUIS-JE (PLEINE LARGEUR, MISE EN AVANT) ===== */
 .section {
     padding: 5rem 2rem;
+}
+
+.section-highlight {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.container-full {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container {
@@ -275,28 +271,20 @@ body {
     font-weight: 700;
 }
 
-/* ===== SECTION QUI SUIS-JE ===== */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    align-items: center;
+.about-content-full {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.about-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-    line-height: 1.8;
+.about-content-full p {
+    margin-bottom: 1.8rem;
+    font-size: 1.15rem;
+    line-height: 1.9;
     color: var(--text-gray);
+    text-align: justify;
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: var(--shadow-hover);
-}
-
-/* ===== TIMELINE DOUBLE COLONNE ===== */
+/* ===== TIMELINE AVEC IMAGES ===== */
 .timeline-double {
     position: relative;
     padding: 3rem 0;
@@ -330,11 +318,12 @@ body {
 
 .timeline-card {
     background: var(--card-bg);
-    padding: 2rem;
+    padding: 0;
     border-radius: 16px;
     box-shadow: var(--shadow);
     position: relative;
     transition: var(--transition);
+    overflow: hidden;
 }
 
 .timeline-card:hover {
@@ -342,11 +331,34 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--primary-lighter);
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-card > div:not(.timeline-image),
+.timeline-card > h3,
+.timeline-card > p {
+    padding: 0 2rem;
+}
+
+.timeline-card > div:last-child {
+    padding-bottom: 2rem;
+}
+
 .timeline-item.left .timeline-card::after {
     content: '';
     position: absolute;
     right: -15px;
-    top: 30px;
+    top: 120px;
     width: 30px;
     height: 30px;
     background: var(--primary);
@@ -359,7 +371,7 @@ body {
     content: '';
     position: absolute;
     left: -15px;
-    top: 30px;
+    top: 120px;
     width: 30px;
     height: 30px;
     background: var(--primary);
@@ -375,7 +387,7 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem;
     font-size: 0.9rem;
 }
 
@@ -383,12 +395,14 @@ body {
     color: var(--text-dark);
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
+    padding-top: 0;
 }
 
 .timeline-card p {
     color: var(--text-gray);
     font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 /* ===== COMPÉTENCES ===== */
@@ -705,26 +719,21 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-tab {
+        font-size: 0.85rem;
+        padding: 1rem 0.8rem;
     }
 
     .hero-name {
         font-size: 2.8rem;
     }
 
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .profile-photo-large {
-        max-width: 280px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
+    .hero-alternance {
+        font-size: 1.5rem;
     }
 
     .timeline-double {
@@ -761,17 +770,26 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+    .profile-photo-small {
+        width: 100px;
+        height: 100px;
     }
 
-    .nav-center {
-        width: 100%;
+    .nav-tab {
+        font-size: 0.75rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .theme-toggle {
+        width: 50px;
     }
 
     .hero-name {
         font-size: 2.2rem;
+    }
+
+    .hero-alternance {
+        font-size: 1.3rem;
     }
 
     .section {
@@ -789,11 +807,30 @@ footer {
     .hero-buttons {
         flex-direction: column;
     }
+
+    .about-content-full p {
+        font-size: 1.05rem;
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
+    .nav-tab {
+        font-size: 0.7rem;
+        padding: 0.8rem 0.3rem;
+    }
+
+    .profile-photo-small {
+        width: 80px;
+        height: 80px;
+    }
+
     .hero-name {
         font-size: 1.8rem;
+    }
+
+    .hero-alternance {
+        font-size: 1.1rem;
     }
 
     .section-title {
